@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { ProblemView } from '../components/ProblemView';
-import type { Problem } from '../data/types';
+import { ProblemView } from './ProblemView';
+import type { Problem } from '../../data/types';
 
 // Mock the JavascriptRunner
 vi.mock('../engine/JavascriptRunner', () => ({

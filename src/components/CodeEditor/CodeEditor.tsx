@@ -1,8 +1,11 @@
 import Editor from 'react-simple-code-editor';
 import { highlight, languages } from 'prismjs';
+
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
-import 'prismjs/themes/prism-dark.css'; // or any other theme
+import 'prismjs/themes/prism-dark.css';
+
+import styles from './CodeEditor.module.css';
 
 interface CodeEditorProps {
     code: string;
@@ -13,26 +16,15 @@ interface CodeEditorProps {
 
 export function CodeEditor({ code, onChange, readOnly = false }: CodeEditorProps) {
     return (
-        <div style={{
-            fontFamily: '"Fira Code", "Fira Mono", monospace',
-            fontSize: 14,
-            backgroundColor: '#1e1e1e',
-            borderRadius: '8px',
-            overflow: 'hidden',
-            border: '1px solid var(--border-color)'
-        }}>
+        <div className={styles.editorWrapper}>
             <Editor
                 value={code}
                 onValueChange={onChange}
                 highlight={code => highlight(code, languages.javascript, 'javascript')}
                 padding={16}
                 readOnly={readOnly}
-                style={{
-                    fontFamily: '"Fira Code", "Fira Mono", monospace',
-                    fontSize: 14,
-                    minHeight: '150px',
-                }}
-                textareaClassName="focus:outline-none"
+                className={styles.editor}
+                textareaClassName={styles.textarea}
             />
         </div>
     );

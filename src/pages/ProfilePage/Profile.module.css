@@ -1,0 +1,207 @@
+.wrapper {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pageTitle {
+    margin-bottom: 2rem;
+}
+
+/* --- Card Base --- */
+.card {
+    margin-top: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+}
+
+/* Centered card layout */
+.cardCentered {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    border: 2px solid var(--border-color);
+}
+
+/* Icons */
+.iconSecondary {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.iconError {
+    color: var(--error);
+    margin-bottom: 0.5rem;
+}
+
+.iconPrimary {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Stats Text */
+.statValue {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.statLabel {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Daily Goal */
+.goalHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.goalTitle {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.goalSub {
+    color: var(--text-muted);
+}
+
+.progressBar {
+    height: 20px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background-color: var(--primary);
+    transition: width 0.5s ease;
+}
+
+/* Activity */
+.activityTitle {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.chartWrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.chartColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.chartBar {
+    width: 30px;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    min-height: 4px;
+    transition: height 0.3s;
+}
+
+.barValue {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.barLabel {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Experimental */
+.cardExperimental {
+    border: 1px solid var(--secondary);
+}
+
+.expTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.expRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expName {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.expStatus {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.expButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+}
+
+/* Variants */
+.btnPrimary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btnError {
+    background-color: var(--error);
+    color: white;
+}
+
+.btnGhostError {
+    background-color: var(--bg-color);
+    color: var(--error);
+    border: 1px solid var(--error);
+}

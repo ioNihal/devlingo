@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout';
-import { Home } from './pages/Home';
-import { Lesson } from './pages/Lesson';
-import { Profile } from './pages/Profile';
-import { Experimental } from './pages/Experimental';
+import { Home } from './pages/HomePage/Home';
+import { Lesson } from './pages/LessonPage/Lesson';
+import { Profile } from './pages/ProfilePage/Profile';
+import { Experimental } from './pages/ExperimentalPage/Experimental';
+import { Layout } from './components/Layout/Layout';
 
 function App() {
   return (

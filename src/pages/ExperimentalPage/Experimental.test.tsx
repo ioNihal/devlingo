@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
+import { useUserStore } from '../../store/userStore';
 import { Experimental } from './Experimental';
-import { useUserStore } from '../store/userStore';
+
 import { BrowserRouter } from 'react-router-dom';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 

@@ -1,5 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Home, User, Sparkles } from 'lucide-react';
+import styles from './Layout.module.css';
 
 export function Layout() {
     const location = useLocation();
@@ -11,23 +12,23 @@ export function Layout() {
     ];
 
     return (
-        <div className="container">
+        <div className={styles.container}>
             <main style={{ flex: 1 }}>
                 <Outlet />
             </main>
 
             {/* Mobile Bottom Nav */}
-            <nav className="bottom-nav">
+            <nav className={styles.bottomNav}>
                 {navItems.map((item) => {
                     const isActive = location.pathname === item.path;
                     return (
                         <Link
                             key={item.path}
                             to={item.path}
-                            className={`nav-item ${isActive ? 'active' : ''}`}
+                            className={`${styles.navItem} ${isActive ? styles.active : ''}`}
                         >
                             <item.icon size={24} strokeWidth={isActive ? 3 : 2} />
-                            <span className="nav-label">
+                            <span className={styles.navLabel}>
                                 {item.label}
                             </span>
                         </Link>
@@ -36,16 +37,16 @@ export function Layout() {
             </nav>
 
             {/* Desktop Sidebar */}
-            <aside className="sidebar">
-                <div className="logo">DevLingo</div>
-                <nav className="sidebar-nav">
+            <aside className={styles.sidebar}>
+                <div className={styles.logo}>DevLingo</div>
+                <nav className={styles.sidebarNav}>
                     {navItems.map((item) => {
                         const isActive = location.pathname === item.path;
                         return (
                             <Link
                                 key={item.path}
                                 to={item.path}
-                                className={`sidebar-item ${isActive ? 'active' : ''}`}
+                                className={`${styles.sidebarItem} ${isActive ? styles.active : ''}`}
                             >
                                 <item.icon size={24} strokeWidth={isActive ? 3 : 2} />
                                 <span>{item.label}</span>
@@ -54,6 +55,6 @@ export function Layout() {
                     })}
                 </nav>
             </aside>
-        </div>
+        </div >
     );
 }

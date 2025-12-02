@@ -1,0 +1,104 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+    /* Space for bottom nav */
+}
+
+/* Mobile Bottom Nav */
+.bottomNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    border-top: 2px solid var(--border-color);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-muted);
+    padding: 0.5rem;
+    flex: 1;
+}
+
+.navItem.active {
+    color: var(--primary);
+}
+
+.navLabel {
+    font-size: 0.75rem;
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+/* Desktop Sidebar (Hidden on Mobile) */
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .bottomNav {
+        display: none;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: var(--sidebar-width);
+        border-right: 2px solid var(--border-color);
+        padding: 2rem 1rem;
+        background-color: var(--bg-color);
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+    }
+
+    .sidebarItem {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        color: var(--text-muted);
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        border: 2px solid transparent;
+    }
+
+    .sidebarItem:hover {
+        background-color: var(--card-bg);
+    }
+
+    .sidebarItem.active {
+        color: var(--primary);
+        background-color: rgba(88, 204, 2, 0.1);
+        border-color: var(--primary);
+    }
+
+    .container {
+        margin-left: var(--sidebar-width);
+        max-width: 800px;
+        /* Wider on desktop */
+        padding-bottom: 1rem;
+    }
+}

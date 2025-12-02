@@ -1,0 +1,23 @@
+.editorWrapper {
+    font-family: "Fira Code", "Fira Mono", monospace;
+    font-size: 14px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+/* Styling passed to react-simple-code-editor */
+.editor {
+    font-family: "Fira Code", "Fira Mono", monospace !important;
+    font-size: 14px !important;
+    min-height: 150px;
+}
+
+/* The underlying textarea */
+.textarea {
+    outline: none !important;
+    border: none !important;
+    background: transparent;
+    color: inherit;
+}

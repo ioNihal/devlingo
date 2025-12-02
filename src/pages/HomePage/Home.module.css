@@ -1,0 +1,98 @@
+.container {
+    padding: 1rem 0;
+}
+
+/* Header */
+.header {
+    padding: 0 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.xpBox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+/* Course Section */
+.courseList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.courseTitle {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding-left: 1rem;
+}
+
+/* Lesson List Grid */
+.lessonGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+/* Lesson Card */
+.lessonLink {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    text-decoration: none;
+}
+
+.locked {
+    pointer-events: none;
+}
+
+/* Lesson Icon */
+.lessonNode {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid var(--border-color);
+    border-bottom-width: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    transition: transform 0.1s;
+}
+
+.completed {
+    background-color: var(--success);
+}
+
+.unlockedNode {
+    background-color: var(--primary);
+}
+
+.lockedNode {
+    background-color: var(--card-bg);
+    opacity: 0.5;
+}
+
+/* Lesson Title */
+.lessonTitle {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.lockedText {
+    color: var(--text-muted);
+}

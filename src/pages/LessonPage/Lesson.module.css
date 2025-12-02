@@ -1,0 +1,50 @@
+.wrapper {
+    padding-bottom: 80px;
+}
+
+/* Header */
+.header {
+    padding: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+/* Titles */
+.titleBlock {
+    flex: 1;
+}
+
+.courseTitle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.lessonTitle {
+    font-weight: bold;
+}
+
+/* Progress bubble */
+.progressBubble {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Problem Container */
+.container {
+    padding: 1rem;
+}
