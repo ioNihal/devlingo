@@ -3,6 +3,7 @@ import { Home } from './pages/HomePage/Home';
 import { Lesson } from './pages/LessonPage/Lesson';
 import { Profile } from './pages/ProfilePage/Profile';
 import { Experimental } from './pages/ExperimentalPage/Experimental';
+import { About } from './pages/AboutPage/About';
 import { Layout } from './components/Layout/Layout';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="lesson/:courseId/:lessonId" element={<Lesson />} />
           <Route path="profile" element={<Profile />} />
           <Route path="experimental" element={<Experimental />} />
+          <Route path="about" element={<About />} />
         </Route>
       </Routes>
     </Router>

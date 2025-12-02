@@ -36,9 +36,9 @@ export const nodejsCourse: Course = {
                 {
                     id: 'p3',
                     type: 'code_execution',
-                    prompt: 'Create a variable named `name` with the value "DevLingo" and print it.',
+                    prompt: 'Create a variable named `name` with the value "DuoPingo" and print it.',
                     codeTemplate: '',
-                    validationCode: 'if (!logs.includes("DevLingo")) throw new Error("Did not print DevLingo");',
+                    validationCode: 'if (!logs.includes("DuoPingo")) throw new Error("Did not print DuoPingo");',
                 }
             ]
         }

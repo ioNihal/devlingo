@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { Home, User, Sparkles } from 'lucide-react';
+import { Home, User, Sparkles, Info, Github } from 'lucide-react';
 import styles from './Layout.module.css';
 
 export function Layout() {
@@ -9,6 +9,7 @@ export function Layout() {
         { icon: Home, label: 'Learn', path: '/' },
         { icon: User, label: 'Profile', path: '/profile' },
         { icon: Sparkles, label: 'AI Beta', path: '/experimental' },
+        { icon: Info, label: 'About', path: '/about' },
     ];
 
     return (
@@ -38,7 +39,20 @@ export function Layout() {
 
             {/* Desktop Sidebar */}
             <aside className={styles.sidebar}>
-                <div className={styles.logo}>DevLingo</div>
+                <div className={styles.logo}>DuoPingo</div>
+
+                <div style={{ padding: '0 1rem 1rem' }}>
+                    <a
+                        href="https://github.com/ioNihal"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.githubLink}
+                    >
+                        <Github size={16} />
+                        <span>Github</span>
+                    </a>
+                </div>
+
                 <nav className={styles.sidebarNav}>
                     {navItems.map((item) => {
                         const isActive = location.pathname === item.path;
