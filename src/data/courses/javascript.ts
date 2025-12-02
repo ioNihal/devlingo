@@ -907,7 +907,7 @@ export const jsAlgo: Course = {
         {
             id: 'hashmap-basic',
             title: 'Hash Map (Object Map)',
-            description: 'Key–value storage',
+            description: 'Key-value storage',
             xpReward: 40,
             problems: [
                 {
