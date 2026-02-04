@@ -3,6 +3,7 @@
 ### Listen, rest of the text are ai generated
 This project uses generative AI questions powered by your own API key. You only need to set it up once, and you can remove it anytime from the app. Everything runs fully on the client side - the only external call is to the Gemini API using your own key.
 
+---
 **Reimagining how developers learn and grow through open source.**
 
 DuoPingo is an open-source React application built around a simple idea:  
